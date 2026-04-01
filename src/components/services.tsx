@@ -47,7 +47,7 @@ export default function Services() {
               <Image
                 alt="Doorstep Delivery"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="/images/misc/sell-car.jpg"
+                src="/images/misc/porsche.jpg"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -77,7 +77,7 @@ export default function Services() {
               <Image
                 alt="Corporate Fleet"
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                src="/images/misc/valuation.jpg"
+                src="/images/misc/premium.jpg"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
