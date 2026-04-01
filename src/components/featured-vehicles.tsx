@@ -27,7 +27,7 @@ export default function FeaturedVehicles() {
         <span className="text-primary font-bold uppercase tracking-[0.3em] text-xs mb-4 block">
           Our Fleet
         </span>
-        <h2 className="font-headline font-extrabold text-5xl md:text-7xl text-zinc-900 dark:text-zinc-50 leading-[1.1] tracking-tighter max-w-3xl">
+        <h2 className="font-headline font-extrabold text-5xl md:text-7xl text-on-surface leading-[1.1] tracking-tighter max-w-3xl">
           Luxury Cars Available For Rent
         </h2>
         <div className="mt-8 flex flex-wrap gap-3">
@@ -67,11 +67,10 @@ export default function FeaturedVehicles() {
               {car.badge && (
                 <div className="absolute top-4 left-4">
                   <span
-                    className={`px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-widest ${
-                      car.badge === "Premium"
-                        ? "bg-primary text-on-primary"
-                        : "bg-white/90 backdrop-blur-md text-zinc-900"
-                    }`}
+                    className={`px-3 py-1 rounded-lg text-xs font-bold uppercase tracking-widest ${car.badge === "Premium"
+                      ? "bg-primary text-on-primary"
+                      : "bg-white/90 backdrop-blur-md text-zinc-900"
+                      }`}
                   >
                     {car.badge}
                   </span>
@@ -85,7 +84,7 @@ export default function FeaturedVehicles() {
             </div>
 
             <div className="p-6 flex flex-col flex-grow">
-              <h3 className="font-headline font-bold text-xl text-zinc-900 dark:text-zinc-50 mb-1">
+              <h3 className="font-headline font-bold text-xl text-on-surface mb-1">
                 {car.name}
               </h3>
               <p className="text-zinc-500 dark:text-zinc-400 text-sm mb-6">
@@ -95,11 +94,11 @@ export default function FeaturedVehicles() {
               <div className="mt-auto flex justify-between items-end">
                 <div className="space-y-1">
                   <div className="flex items-center gap-2 text-zinc-400 text-xs">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /></svg>
                     {car.seats}
                   </div>
                   <div className="flex items-center gap-2 text-zinc-400 text-xs">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
                     {car.transmission}
                   </div>
                 </div>
@@ -107,7 +106,7 @@ export default function FeaturedVehicles() {
                   <span className="block text-xs text-zinc-400 font-medium">
                     From
                   </span>
-                  <span className="text-lg font-black text-zinc-900 dark:text-zinc-50">
+                  <span className="text-lg font-black text-on-surface">
                     {car.pricePerDay}
                     <span className="text-xs font-medium text-zinc-400">/day</span>
                   </span>
