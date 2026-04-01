@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-headline: var(--font-plus-jakarta-sans);
+  --font-body: var(--font-manrope);
+
+  --color-surface: var(--surface);
+  --color-surface-container: var(--surface-container);
+  --color-surface-container-low: var(--surface-container-low);
+  --color-surface-container-lowest: var(--surface-container-lowest);
+  --color-surface-container-high: var(--surface-container-high);
+  --color-surface-container-highest: var(--surface-container-highest);
+  --color-surface-tint: var(--surface-tint);
+  --color-on-surface: var(--on-surface);
+  --color-on-surface-variant: var(--on-surface-variant);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--on-primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+  --color-on-secondary-container: var(--on-secondary-container);
+  --color-outline: var(--outline-clr);
+  --color-outline-variant: var(--outline-variant);
+  --color-tertiary: var(--tertiary);
+}
+
+:root {
+  --surface: #f9f9f9;
+  --surface-container: #eeeeee;
+  --surface-container-low: #f3f3f3;
+  --surface-container-lowest: #ffffff;
+  --surface-container-high: #e8e8e8;
+  --surface-container-highest: #e2e2e2;
+  --surface-tint: #5e5e5e;
+  --on-surface: #1a1c1c;
+  --on-surface-variant: #474747;
+  --primary: #000000;
+  --on-primary: #e2e2e2;
+  --primary-container: #3b3b3b;
+  --secondary: #5e5e5e;
+  --secondary-container: #d4d4d4;
+  --on-secondary-container: #1b1b1b;
+  --outline-clr: #777777;
+  --outline-variant: #c6c6c6;
+  --tertiary: #3b3b3b;
+}
+
+.dark {
+  --surface: #0a0a0a;
+  --surface-container: #1a1a1a;
+  --surface-container-low: #121212;
+  --surface-container-lowest: #0e0e0e;
+  --surface-container-high: #222222;
+  --surface-container-highest: #2a2a2a;
+  --surface-tint: #a0a0a0;
+  --on-surface: #e8e8e8;
+  --on-surface-variant: #b0b0b0;
+  --primary: #ffffff;
+  --on-primary: #1a1a1a;
+  --primary-container: #c0c0c0;
+  --secondary: #a0a0a0;
+  --secondary-container: #333333;
+  --on-secondary-container: #e2e2e2;
+  --outline-clr: #888888;
+  --outline-variant: #444444;
+  --tertiary: #c0c0c0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--surface);
+  color: var(--on-surface);
+  font-family: var(--font-body), "Manrope", sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-headline), "Plus Jakarta Sans", sans-serif;
+}
+
+::selection {
+  background-color: var(--primary);
+  color: var(--on-primary);
+}
