@@ -46,18 +46,22 @@ export default function Footer() {
           <div key={heading}>
             <h4 className="font-bold font-headline uppercase tracking-widest text-zinc-900 dark:text-zinc-50 mb-6 text-xs">{heading}</h4>
             <ul className="space-y-4">
-              {items.map((item) => (
-                <li key={item.label}>
-                  <a
-                    href="#"
-                    className={`text-sm font-medium transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 ${
-                      item.bold ? "text-zinc-900 dark:text-zinc-50" : "text-zinc-500 dark:text-zinc-400"
-                    }`}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
+              {items.map((item) => {
+                let href = "#";
+                if (item.label === "About Us") href = "#about";
+                return (
+                  <li key={item.label}>
+                    <a
+                      href={href}
+                      className={`text-sm font-medium transition-colors hover:text-zinc-900 dark:hover:text-zinc-100 ${
+                        item.bold ? "text-zinc-900 dark:text-zinc-50" : "text-zinc-500 dark:text-zinc-400"
+                      }`}
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                );
+              })}
             </ul>
           </div>
         ))}
@@ -68,9 +72,12 @@ export default function Footer() {
           © {new Date().getFullYear()} Reign Rentals. Built by Timothy Thomas.
         </p>
         <div className="flex gap-8">
-          {["Instagram", "Twitter/X", "LinkedIn"].map((social) => (
-            <a key={social} href="#" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors text-xs">
-              {social}
+          {[
+            { name: "Instagram", url: "https://www.instagram.com/timothy__toms/" },
+            { name: "LinkedIn", url: "https://www.linkedin.com/in/timothythomas-dev/" },
+          ].map((social) => (
+            <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors text-xs">
+              {social.name}
             </a>
           ))}
         </div>
